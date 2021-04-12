@@ -14,3 +14,7 @@ notifier:
     enable: false
     api_token: 'dummy_token'
     user_key: 'dummy_key'
+  telegram:
+    enable: false
+    bot_token: 'dummy_token'
+    chat_id: 'dummy_chat_id'

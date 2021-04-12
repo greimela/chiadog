@@ -20,6 +20,10 @@ class TestConfig(unittest.TestCase):
         self.assertEqual(notifier_config["pushover"]["api_token"], "dummy_token")
         self.assertEqual(notifier_config["pushover"]["user_key"], "dummy_key")
 
+        self.assertEqual(notifier_config["telegram"]["enable"], False)
+        self.assertEqual(notifier_config["telegram"]["bot_token"], "dummy_token")
+        self.assertEqual(notifier_config["telegram"]["chat_id"], "dummy_chat_id")
+
         chia_logs_config = config.get_chia_logs_config()
         self.assertEqual(chia_logs_config["file_log_consumer"]["enable"], True)
         self.assertEqual(chia_logs_config["file_log_consumer"]["file_path"], "~/.chia/mainnet/log/debug.log")
